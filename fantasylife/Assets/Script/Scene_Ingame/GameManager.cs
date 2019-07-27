@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class timer : MonoBehaviour
-{
+public class GameManager :  EventManager, EventListener {
     public GameObject ui_timehour;
     public GameObject ui_timeminute;
 
@@ -58,5 +57,13 @@ public class timer : MonoBehaviour
             itspm = 0;
             gameday++; // 날짜가 넘어감
         }
+    }
+
+    public void MoveMapToID(int id) {
+
+    }
+
+    public void HandleEvent(GameEvent e) {
+
     }
 }
