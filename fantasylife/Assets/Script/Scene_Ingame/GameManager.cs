@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager :  EventManager, EventListener {
+    public static GameManager instance;
+    public static GameManager Get() {
+        return instance;
+    }
+
     public GameObject ui_timehour;
     public GameObject ui_timeminute;
 
@@ -11,6 +16,10 @@ public class GameManager :  EventManager, EventListener {
     public static int gamehour = 12; // 시
     public static int gameminute; // 분
     public static int itspm; // PM AM
+
+    public void Awake() {
+        instance = this;
+    }
 
     void FixedUpdate()
     {
