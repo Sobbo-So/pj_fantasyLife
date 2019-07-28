@@ -5,18 +5,15 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 public class CSVLoader {
-    public static CSVLoader instance;
-    public CSVLoader Get() {
-        return instance;
-    }
-
     private static readonly string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
     private static readonly string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
     private static readonly char[] TRIM_CHARS = { '\"' };
 
+    private static string _fileName = "Datas\\";
+
     public static List<Dictionary<string, object>> Read(string file) {
         var list = new List<Dictionary<string, object>>();
-        TextAsset data = Resources.Load(file) as TextAsset;
+        TextAsset data = Resources.Load(_fileName + file) as TextAsset;
 
         var lines = Regex.Split(data.text, LINE_SPLIT_RE);
 
