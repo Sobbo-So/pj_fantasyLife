@@ -67,11 +67,6 @@ public class GameManager : EventListener {
         }
     }
 
-    public void MoveMapToID(int id) {
-        // Start FadeIn
-        // Coroutine Start
-    }
-
     public void IncreaseParam(int type, float value) {
         if (type >= _playerParam.Length)
             return;
