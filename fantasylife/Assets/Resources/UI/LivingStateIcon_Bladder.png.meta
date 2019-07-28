@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: -3422016083678745551
     second: LivingStateIcon_Bladder_1
+  - first:
+      213: 1763413857449825409
+    second: LivingStateIcon_Bladder_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -86,6 +89,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -93,10 +107,10 @@ TextureImporter:
       name: LivingStateIcon_Bladder_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 9
-        width: 10
-        height: 14
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8700916f38b10c4489fbc5f06b704c97
+      spriteID: b53afac76336249419a78889ade2161a
       internalID: 5593749659547092680
       vertices: []
       indices: 
@@ -114,10 +128,10 @@ TextureImporter:
       name: LivingStateIcon_Bladder_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 9
-        width: 10
-        height: 14
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +139,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1248d538947e83409559fc850cb65f7
+      spriteID: 0acf59797a7ec824181092a85fc4a874
       internalID: -3422016083678745551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivingStateIcon_Bladder_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b521a7c330dec4b982b618ddaed564
+      internalID: 1763413857449825409
       vertices: []
       indices: 
       edges: []
@@ -134,7 +169,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f33fd0d83e9943b4abe2273b618032cc
+    spriteID: 533923bc56403e445b201828b53b5624
     internalID: 0
     vertices: []
     indices: 

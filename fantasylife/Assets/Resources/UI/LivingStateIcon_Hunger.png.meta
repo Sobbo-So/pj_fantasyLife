@@ -11,9 +11,6 @@ TextureImporter:
   - first:
       213: -445159693637904553
     second: LivingStateIcon_Hunger_2
-  - first:
-      213: -8930950561259078544
-    second: LivingStateIcon_Hunger_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -92,6 +89,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -99,10 +107,10 @@ TextureImporter:
       name: LivingStateIcon_Hunger_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 7
-        height: 14
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7914b6c83f547c74482773343ded5b9a
+      spriteID: cbc087b0b6c64db4a80a6afd879d21ea
       internalID: -1742278224067953403
       vertices: []
       indices: 
@@ -120,10 +128,10 @@ TextureImporter:
       name: LivingStateIcon_Hunger_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 9
-        width: 4
-        height: 14
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35e7f1d608f925c4a9f86aee17abb31e
+      spriteID: 994bab83b823c98408c323001fadf1b4
       internalID: -6135729630971618517
       vertices: []
       indices: 
@@ -141,10 +149,10 @@ TextureImporter:
       name: LivingStateIcon_Hunger_2
       rect:
         serializedVersion: 2
-        x: 41
-        y: 9
-        width: 7
-        height: 14
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,29 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7b132bf5434b1498922af2d0a8a7d7
+      spriteID: 5beecacf66ad42c48bafeb40a1e85668
       internalID: -445159693637904553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LivingStateIcon_Hunger_3
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 9
-        width: 4
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f38c7981954ccf42a165192fb75ea10
-      internalID: -8930950561259078544
       vertices: []
       indices: 
       edges: []
@@ -182,7 +169,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 818267a8799994e408e32e4b3b30e829
+    spriteID: 4f06a628547989844a7c877a55700989
     internalID: 0
     vertices: []
     indices: 

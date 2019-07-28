@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 6218972444625864848
     second: LivingStateIcon_Stress_1
+  - first:
+      213: -1903752231791109671
+    second: LivingStateIcon_Stress_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -86,6 +89,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -93,10 +107,10 @@ TextureImporter:
       name: LivingStateIcon_Stress_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 8
-        width: 11
-        height: 15
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fa2a08e4bcde2d4e86596b7020f54fe
+      spriteID: bcff9430162a79243952989ed17b6776
       internalID: 6608755455963539600
       vertices: []
       indices: 
@@ -114,10 +128,10 @@ TextureImporter:
       name: LivingStateIcon_Stress_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 8
-        width: 11
-        height: 15
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +139,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b60c2b8c8c63a3f40af16de0f849bd81
+      spriteID: aa9413a26a3ff584a90de747631b79cd
       internalID: 6218972444625864848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivingStateIcon_Stress_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942b7137701ae3d4f8a9afcba714eef0
+      internalID: -1903752231791109671
       vertices: []
       indices: 
       edges: []
@@ -134,7 +169,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5434bbc056678dd4daa363cdb1539485
+    spriteID: 7a754ad6ad9574c46ad19b28a45eb453
     internalID: 0
     vertices: []
     indices: 

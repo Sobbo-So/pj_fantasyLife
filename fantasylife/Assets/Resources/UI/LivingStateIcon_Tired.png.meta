@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: -2703635486012725807
     second: LivingStateIcon_Tired_1
+  - first:
+      213: 3587528449544460763
+    second: LivingStateIcon_Tired_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -86,6 +89,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -93,10 +107,10 @@ TextureImporter:
       name: LivingStateIcon_Tired_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 9
-        width: 10
-        height: 14
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf36bf37baf96648a8722afb6eccbee
+      spriteID: b12c5d32b97cddb4d9797fa0947d9fa6
       internalID: 5002048722766798221
       vertices: []
       indices: 
@@ -114,10 +128,10 @@ TextureImporter:
       name: LivingStateIcon_Tired_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 9
-        width: 10
-        height: 14
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,8 +139,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b864f9a8ddd3e546b756fec13988e4b
+      spriteID: 6624368b5e39f964792facd7377e7dbf
       internalID: -2703635486012725807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivingStateIcon_Tired_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7206553f605614f9ac4cccf60dacd8
+      internalID: 3587528449544460763
       vertices: []
       indices: 
       edges: []
@@ -134,7 +169,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0e8dd5ef50f9c6542ac80d429dca1901
+    spriteID: c5f560453adf2864289de14bbb2c4f9a
     internalID: 0
     vertices: []
     indices: 

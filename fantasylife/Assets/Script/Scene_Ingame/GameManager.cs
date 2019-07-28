@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager :  EventManager, EventListener {
+public class GameManager : MonoBehaviour, EventListener {
     public static GameManager instance;
     public static GameManager Get() {
         return instance;
@@ -11,9 +11,10 @@ public class GameManager :  EventManager, EventListener {
 
     public GameObject ui_timehour;
     public GameObject ui_timeminute;
+    public GameObject ui_pmap;
 
-    public static int gameday = 1; // 일차
-    public static int gamehour = 12; // 시
+    public static int gameday = 1; // 일차     ★ 껐을 때 저장될 날짜 데이터  일,시,분,PMAM
+    public static int gamehour = 12; // 시         
     public static int gameminute; // 분
     public static int itspm; // PM AM
 
@@ -23,8 +24,6 @@ public class GameManager :  EventManager, EventListener {
 
     void FixedUpdate()
     {
-        Debug.Log(gamehour);
-        Debug.Log(gameminute);
 
         gameminute++;
 
@@ -37,7 +36,7 @@ public class GameManager :  EventManager, EventListener {
                 ChangePMAM(); // PM AM을 바꿔줌
             }
 
-            if(gamehour <= 13) // '시'가 13보다 같거나 클때(3)
+            if(gamehour >= 13) // '시'가 13보다 같거나 클때(3)
             {
                 gamehour = 1; //1로 바꿔줌
             }
@@ -46,6 +45,11 @@ public class GameManager :  EventManager, EventListener {
         ui_timehour.GetComponent<Text>().text = string.Format("{0:D2}", gamehour).ToString(); // 시간 표시
         ui_timeminute.GetComponent<Text>().text = string.Format("{0:D2}",gameminute).ToString(); // 분 표시
 
+        if (itspm == 0) // AM이면
+            ui_pmap.GetComponent<Text>().text = "AM";
+        else //PM 이면
+            ui_pmap.GetComponent<Text>().text = "PM";
+ 
     }
 
     void ChangeHour()
@@ -56,15 +60,16 @@ public class GameManager :  EventManager, EventListener {
 
     void ChangePMAM()
     {
-        gamehour = 0;
+        gamehour = 12;
 
         if (itspm == 0) // AM이면 PM으로
             itspm = 1;
 
+
         else if (itspm == 0) // PM이면 AM으로
         {
             itspm = 0;
-            gameday++; // 날짜가 넘어감
+            gameday++; // 일차 추가
         }
     }
 
