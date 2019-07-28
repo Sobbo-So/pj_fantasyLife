@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 464448854}
   - component: {fileID: 464448853}
   m_Layer: 5
-  m_Name: shit
+  m_Name: bladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1311,7 +1311,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
@@ -1328,21 +1327,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
---- !u!114 &519420030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 542126a755007fa449f3b20e4d530b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ui_timehour: {fileID: 289231683}
-  ui_timeminute: {fileID: 643762250}
-  ui_pmap: {fileID: 494728241}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1776,7 +1760,7 @@ GameObject:
   - component: {fileID: 907299746}
   - component: {fileID: 907299745}
   m_Layer: 5
-  m_Name: clean
+  m_Name: hygiene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2822,7 +2806,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -8355221177437873995, guid: c015453cf0c696e4c8902cf386503c17,
+  m_Sprite: {fileID: 2998514991549339687, guid: c5efe19934aa49f4cb792214326cdfd3,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3098,6 +3082,7 @@ GameObject:
   - component: {fileID: 2037861059}
   - component: {fileID: 2037861058}
   - component: {fileID: 2037861057}
+  - component: {fileID: 2037861061}
   m_Layer: 5
   m_Name: IngameUI
   m_TagString: Untagged
@@ -3193,6 +3178,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2037861061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037861056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a140800eea77c458d0154d242d18cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas_Base: {fileID: 2037861059}
+  txtTime: {fileID: 289231685}
+  txtMinute: {fileID: 643762252}
+  txtNoon: {fileID: 494728243}
+  imgStatus:
+  - {fileID: 464448853}
+  - {fileID: 1516385039}
+  - {fileID: 907299745}
+  - {fileID: 710041155}
+  - {fileID: 498039232}
+  mapSprites:
+  - type: 0
+    sprites:
+    - {fileID: 1763413857449825409, guid: c8f9704c65604db499087e609d371735, type: 3}
+    - {fileID: -3422016083678745551, guid: c8f9704c65604db499087e609d371735, type: 3}
+    - {fileID: 5593749659547092680, guid: c8f9704c65604db499087e609d371735, type: 3}
+  - type: 1
+    sprites:
+    - {fileID: -445159693637904553, guid: c7643fe9751a06542a34423f83db22c9, type: 3}
+    - {fileID: -6135729630971618517, guid: c7643fe9751a06542a34423f83db22c9, type: 3}
+    - {fileID: -1742278224067953403, guid: c7643fe9751a06542a34423f83db22c9, type: 3}
+  - type: 2
+    sprites:
+    - {fileID: -1519572100969776375, guid: 0314f1c8a6ad40b479c6b926b12c102e, type: 3}
+    - {fileID: 2811544661223255369, guid: 0314f1c8a6ad40b479c6b926b12c102e, type: 3}
+    - {fileID: 6051338880879544557, guid: 0314f1c8a6ad40b479c6b926b12c102e, type: 3}
+  - type: 3
+    sprites:
+    - {fileID: -1903752231791109671, guid: 7590d3153ed85b64b8560bf01ba0bce3, type: 3}
+    - {fileID: 6218972444625864848, guid: 7590d3153ed85b64b8560bf01ba0bce3, type: 3}
+    - {fileID: 6608755455963539600, guid: 7590d3153ed85b64b8560bf01ba0bce3, type: 3}
+  - type: 4
+    sprites:
+    - {fileID: 3587528449544460763, guid: d44f0a8a399ee5748afce1e56d96ec26, type: 3}
+    - {fileID: -2703635486012725807, guid: d44f0a8a399ee5748afce1e56d96ec26, type: 3}
+    - {fileID: 5002048722766798221, guid: d44f0a8a399ee5748afce1e56d96ec26, type: 3}
 --- !u!1 &2125619614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,7 +3284,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -8355221177437873995, guid: c015453cf0c696e4c8902cf386503c17,
+  m_Sprite: {fileID: 9141368849773248588, guid: c5efe19934aa49f4cb792214326cdfd3,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
