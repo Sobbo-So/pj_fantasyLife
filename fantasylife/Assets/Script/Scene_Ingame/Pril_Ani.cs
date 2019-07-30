@@ -13,14 +13,16 @@ public class Pril_Ani : MonoBehaviour
         TARGETWALK = 99
     };
 
-    int prilstate; // 애니메이션(캐릭터)의 현재 상태를 저장
+    public static int prilstate; // 애니메이션(캐릭터)의 현재 상태를 저장
+    public static float movespeed = 0.03f; // 캐릭터 이동 속도
+    public static int moveDir = 1; // 현재 이동방향      0 = 왼쪽, 1 = 오른쪽
+    
+
     int stategauge; // animation 현재 애니메이션 시간 카운트
     int walkgauge, idlegauge; // 각 애니메이션 유지상태 설정 시간
 
     public int idle_timeMax, idle_timeMin; // IDLE 시간 최대값, 최소값
     public int walk_timeMax, walk_timeMin; // WALK 시간 최대값, 최소값
-
-    public float movespeed; // 캐릭터 이동 속도
 
     public void FixedUpdate() // 상태 바꾸기
     {
@@ -46,15 +48,21 @@ public class Pril_Ani : MonoBehaviour
             {
                 this.transform.Translate(new Vector3(-movespeed, 0, 0));
 
-                if (this.transform.position.x < -2.8) // 캐릭터 좌표값이 왼쪽끝이면 오른쪽을 보게함
+                if (this.transform.position.x < -8) // 캐릭터 좌표값이 왼쪽끝이면 오른쪽을 보게함
+                {
                     GetComponent<SpriteRenderer>().flipX = false;
+                    moveDir = 1;
+                }
             }
             else //오른쪽을 보고 있으면 오른쪽 이동
             {
                 this.transform.Translate(new Vector3(movespeed, 0, 0));
 
-                if (this.transform.position.x > 2.8) // 캐릭터 좌표값이 오른쪽끝이면 왼쪽을 보게함
+                if (this.transform.position.x > 8) // 캐릭터 좌표값이 오른쪽끝이면 왼쪽을 보게함
+                {
                     GetComponent<SpriteRenderer>().flipX = true;
+                    moveDir = 0;
+                }
             }
         }
     }
