@@ -8,7 +8,8 @@ public interface EventListener {
 }
 
 public enum GameEventType {
-    RUNOUT_STATUS,
+    REFRESH_STATUS,
+    REFRESH_NOON,
 }
 
 public class GameEvent {
@@ -49,6 +50,8 @@ public class GameEvent {
 }
 
 public class EventManager {
+    public static EventManager instance;
+
     private List<EventListener> lstListener = new List<EventListener>();
 
     public void AddListener(EventListener l) {
