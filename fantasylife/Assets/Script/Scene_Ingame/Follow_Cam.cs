@@ -13,7 +13,7 @@ public class Follow_Cam : MonoBehaviour
             //Debug.Log(1);
             Debug.Log(Math.Abs((double)this.transform.position.x) -(double)Charecter.transform.position.x);
 
-            if (Math.Abs(Charecter.transform.position.x) < 7.2) // 2) 배경의 최대 범위를 벗어나지 않으면서
+            if (Math.Abs(Charecter.transform.position.x) < 7) // 2) 배경의 최대 범위를 벗어나지 않으면서
             {
                 if (Math.Abs((double)this.transform.position.x - (double)Charecter.transform.position.x) >= 1)
                 {
