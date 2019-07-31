@@ -7,8 +7,12 @@ public class Drag_Cam : MonoBehaviour
     float dragSpeed; //드래그 스피드
     float overAccel; // 끄트머리 가속도 값
     float dragAccel; // 드래그 가속도 값
+    float bounceAccel;// 바운스 가속도 값
+
     bool dragAccelFlag; // 드래그 가속 플래그
     bool dragAccelStop; // 드래그 스톱 플래그
+    bool bounceFlag; // 바운스 플래그
+
     Vector3 dragOrigin;
     Vector3 pos;
     Vector3 move;
@@ -21,35 +25,41 @@ public class Drag_Cam : MonoBehaviour
             dragSpeed = 0.3f; // 드래그 스피드 초기화
             overAccel = 0.3f; // 끄트머리 가속도값 초기화
             dragAccel = 0.15f; // 드래그 가속도값 초기화
+            bounceAccel = 0.03f; // 바운스 가속도값 초기화
+
             dragAccelFlag = false; // 드래그 엑셀
             dragAccelStop = false;
+            bounceFlag = false;
             dragOrigin = Input.mousePosition;
+            Follow_Cam.ChasingCount = 0;
         }
 
         if (Input.GetMouseButtonUp(0))
         {
-            if (Mathf.Abs((float)move.x) < 0.15)
+            Follow_Cam.fluidChasingStartFlag = false;
+            Follow_Cam.fluidChasingEndFlag = false;
+            Follow_Cam.ChasingSpeed = 0.3f;
+
+            if (Mathf.Abs((float)move.x) < 0.02) // 드래그 강도1
+                return;
+
+            if (Mathf.Abs((float)move.x) < 0.15) // 드래그 강도2
             {
                 dragAccel = 0.08f;
                 overAccel = 0.09f;
             }
 
-            if (Mathf.Abs((float)move.x) > 0.15)
+            if (Mathf.Abs((float)move.x) > 0.15) // 드래그 강도3
             {
                 dragAccel = 0.3f;
                 overAccel = 0.3f;
             }
-
-            if ((float)move.x == 0)
-                return;
-
             dragAccelFlag = true;
-            Debug.Log((float)move.x);
         }
 
         if(dragAccelFlag == true)
         {
-            if (dragAccel >= 0.01f && Mathf.Abs(Camera.main.transform.position.x) < 6.7) //제한점 더 낮음
+            if (dragAccel >= 0.01f && Mathf.Abs(Camera.main.transform.position.x) < 6.7 && bounceFlag == false) //제한점 더 낮음
             {
                 dragAccel *= 0.98f;
 
@@ -59,10 +69,28 @@ public class Drag_Cam : MonoBehaviour
                 if ((float)move.x > 0)
                     transform.Translate(-dragAccel, 0, 0); // 왼쪽 가속도
             }
-            else
+
+            else if (Mathf.Abs(Camera.main.transform.position.x) > 6.7 || bounceFlag == true) // 바운스를 담당함
+            {
+                bounceFlag = true;
+
+                bounceAccel *= 0.98f;
+
+                if (Camera.main.transform.position.x > 0)
+                {
+                    transform.Translate(-bounceAccel, 0, 0);
+                }
+                if (Camera.main.transform.position.x < -0)
+                {
+                    transform.Translate(bounceAccel, 0, 0);
+                }
+            }
+            
+            else if(dragAccel <= 0.01f)
+            {
                 dragAccelFlag = false;
-
-
+                bounceFlag = false;
+            }
         }
 
         if (!Input.GetMouseButton(0))
@@ -82,10 +110,16 @@ public class Drag_Cam : MonoBehaviour
         {
             pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
 
-            move = new Vector3(pos.x * dragSpeed, 0, 0); // 카메라는 좌우로만 이동
+            move = new Vector3(pos.x * dragSpeed, 0, 0);
 
-            if (Mathf.Abs(Camera.main.transform.position.x) < 9) // 넘으면 안되는 영역 ★
-                transform.Translate(-move, Space.World); // (-) = 드래그의 반대방향
+            transform.Translate(-move, Space.World);
+
         }
+        if (Camera.main.transform.position.x > 9)
+            Camera.main.transform.position = new Vector3(9, 0, -10);
+
+        if (Camera.main.transform.position.x < -9)
+            Camera.main.transform.position = new Vector3(-9, 0, -10);
+
     }
 }

@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: 04a312be6a912aa44a7db000a167ca44
+guid: b226eebbc0a39bb4dba6221d3d0b3f60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8974346564245401386
-    second: Pril_Walk_0
+      213: -1569176421428800377
+    second: MouseCursor_Basic_0
   - first:
-      213: 8769710419080970369
-    second: Pril_Walk_1
+      213: -4751287485690263799
+    second: MouseCursor_Basic_1
   - first:
-      213: 2308459509909089223
-    second: Pril_Walk_2
+      213: 4781412216335299190
+    second: MouseCursor_Basic_2
   - first:
-      213: 1173301934636375267
-    second: Pril_Walk_3
-  - first:
-      213: -6217941791944501736
-    second: Pril_Walk_4
-  - first:
-      213: 2025822188774157257
-    second: Pril_Walk_5
-  - first:
-      213: 8922947029868897918
-    second: Pril_Walk_6
-  - first:
-      213: -8622393887809742711
-    second: Pril_Walk_7
+      213: -8241550331180153998
+    second: MouseCursor_Basic_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -108,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pril_Walk_0
+      name: MouseCursor_Basic_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +110,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0174eebd880fda24989d3d1e4894e9f1
-      internalID: -8974346564245401386
+      spriteID: 21187966f4cb53a4e8da1d7d5cbc1df2
+      internalID: -1569176421428800377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pril_Walk_1
+      name: MouseCursor_Basic_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 16
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfcdf84be5796ec46b850c8459ed3ced
-      internalID: 8769710419080970369
+      spriteID: 975c52e195358eb49896cd53dbaa67c2
+      internalID: -4751287485690263799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pril_Walk_2
+      name: MouseCursor_Basic_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 32
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7f416f31605f224b9f170ae86e5806e
-      internalID: 2308459509909089223
+      spriteID: 54748267b336291428c0f45b218d56e1
+      internalID: 4781412216335299190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pril_Walk_3
+      name: MouseCursor_Basic_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 48
         y: 0
-        width: 128
-        height: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,92 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3826e15b4018b1843839092453ea8563
-      internalID: 1173301934636375267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pril_Walk_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1dbd8fef9f5ab6340be770f0f8a08830
-      internalID: -6217941791944501736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pril_Walk_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3a641541b330fd44818bd33be38ad83
-      internalID: 2025822188774157257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pril_Walk_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b64db7f7abca0c4cbc4498c0b5a0484
-      internalID: 8922947029868897918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pril_Walk_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3b3b9e7c8152914e8af92c823099e34
-      internalID: -8622393887809742711
+      spriteID: d9e31cca62cb93f468ec04501adb9c4d
+      internalID: -8241550331180153998
       vertices: []
       indices: 
       edges: []
@@ -278,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 24e7d8712331f5343a633bc83ec0e6fe
+    spriteID: e203f4073c6760545a6c953a81a155ce
     internalID: 0
     vertices: []
     indices: 
