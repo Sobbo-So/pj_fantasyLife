@@ -7,39 +7,18 @@ public class Follow_Cam : MonoBehaviour
 {
     public GameObject Charecter; // 쫒을 오브젝트
     public static int ChasingCount = 0;
-    public static int ChasingFullCount = 8;
+    public static int ChasingFullCount = 3;
     public static bool fluidChasingStartFlag;
-    public static bool fluidChasingEndFlag;
+    public static bool fluidChasingEndFlag = true;
     public static float ChasingSpeed;
 
     void FixedUpdate()
     {
-        if(cameraMode.pludidmode == true && fluidChasingStartFlag == false)
+        if(fluidChasingStartFlag == false)
         {
             ChasingCount++;
             if (ChasingCount == ChasingFullCount)
             {
-                if (Math.Abs((float)Camera.main.transform.position.x - (float)Charecter.transform.position.x) < 2)
-                {
-                    Debug.Log(1);
-                    ChasingSpeed = 0.08f;
-                }
-                else if (Math.Abs((float)Camera.main.transform.position.x - (float)Charecter.transform.position.x) < 4)
-                {
-                    Debug.Log(2);
-                    ChasingSpeed = 0.1f;
-                }
-                else if (Math.Abs((float)Camera.main.transform.position.x - (float)Charecter.transform.position.x) < 6)
-                {
-                    Debug.Log(3);
-                    ChasingSpeed = 0.25f;
-                }
-                else
-                {
-                    Debug.Log(4);
-                    ChasingSpeed = 0.4f;
-                }
-
                 fluidChasingStartFlag = true;
             }
         }
@@ -47,34 +26,32 @@ public class Follow_Cam : MonoBehaviour
 
     void Update()
     {
-        if (cameraMode.pludidmode == true) // 플루이드 모드에서의 캐릭터 추격
+        if (fluidChasingStartFlag == true && fluidChasingEndFlag == false || CharecterChaice.chacing_flag == true)
         {
-            if (fluidChasingStartFlag == true && fluidChasingEndFlag == false)
+            if (Mathf.Abs((float) Camera.main.transform.position.x - (float)Charecter.transform.position.x)<1) // 카메라와 캐릭터의 포지션이 같아지면
             {
-                if (Mathf.Abs((int)Camera.main.transform.position.x -(int)Charecter.transform.position.x) < 1) // 카메라와 캐릭터의 포지션이 같아지면
-                {
-                    fluidChasingStartFlag = false;
-                    fluidChasingEndFlag = true;
-                }
+                fluidChasingStartFlag = false;
+                fluidChasingEndFlag = true;
+                CharecterChaice.chacing_flag = false;
+                return;
+            }
 
-                if (Camera.main.transform.position.x < Charecter.transform.position.x) 
-                {
-                    Camera.main.transform.Translate(ChasingSpeed, 0, 0);
-                }
+            if (Camera.main.transform.position.x < Charecter.transform.position.x)
+            {
+                Camera.main.transform.Translate(ChasingSpeed, 0, 0);
+            }
 
-                if (Camera.main.transform.position.x > Charecter.transform.position.x)
-                {
-                    Camera.main.transform.Translate(-ChasingSpeed, 0, 0);
-                }
+            if (Camera.main.transform.position.x > Charecter.transform.position.x)
+            {
+                Camera.main.transform.Translate(-ChasingSpeed, 0, 0);
+            }
 
-                ChasingSpeed *= 0.98f;
-                if(ChasingSpeed <0.01)
-                {
-                    ChasingSpeed = 0.03f;
-                }
+            ChasingSpeed *= 0.98f;
+            if (ChasingSpeed < 0.09f)
+            {
+                ChasingSpeed = 0.09f;
             }
         }
-        
 
         // 캐릭터가 카메라 안에 있을 때 내 추격하는 기능
 
@@ -84,7 +61,7 @@ public class Follow_Cam : MonoBehaviour
             {
                 if (Math.Abs((float)Camera.main.transform.position.x - (float)Charecter.transform.position.x) >= 1)
                 {
-                    if (fluidChasingEndFlag == true || cameraMode.pludidmode == false)
+                    if (fluidChasingEndFlag == true)
                     {
                         if (Math.Abs((float)Camera.main.transform.position.x - (float)Charecter.transform.position.x) <= 1.5)
                         {

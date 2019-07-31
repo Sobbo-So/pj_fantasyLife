@@ -38,7 +38,7 @@ public class Drag_Cam : MonoBehaviour
         {
             Follow_Cam.fluidChasingStartFlag = false;
             Follow_Cam.fluidChasingEndFlag = false;
-            Follow_Cam.ChasingSpeed = 0.3f;
+            Follow_Cam.ChasingSpeed = 0.27f;
 
             if (Mathf.Abs((float)move.x) < 0.02) // 드래그 강도1
                 return;
