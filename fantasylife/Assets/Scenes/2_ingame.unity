@@ -1622,8 +1622,8 @@ MonoBehaviour:
   Charecter: {fileID: 559192504}
   ChasingCount: 0
   ChasingFullCount: 8
-  fluidChasingStartFlag: 0
-  fluidChasingEndFlag: 1
+  ChasingStartFlag: 0
+  ChasingEndFlag: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1796,13 +1796,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 559192504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26297f7167fd0d341a6d7b9a473391b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 97766c2f926ef514f849bea6e33fcad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle_timeMax: 3
-  idle_timeMin: 8
-  walk_timeMax: 3
-  walk_timeMin: 8
+  Pril: {fileID: 559192504}
 --- !u!1 &643762250
 GameObject:
   m_ObjectHideFlags: 0

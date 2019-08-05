@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Pril_Control : MonoBehaviour
 {
     enum ANISTATE 
@@ -18,11 +17,14 @@ public class Pril_Control : MonoBehaviour
     public static int prilstate_org; // 애니메이션(캐릭터)의 현재 상태
     public static int prilstate_cpy; // 애니메이션(캐릭터)의 현재 상태 복사본
 
+    public bool turnflag;
+
     Vector3 TargetPoint; // 목표 좌표값
 
     public static float movespeed = 0.03f; // 캐릭터 이동 속도
+
     public static int moveDir_org = 1; // 현재 이동방향  0 = 왼쪽, 1 = 오른쪽
-    public static int moveDir_cpy = 1; // 현재 이동방향 복사본
+    public static int moveDir_cpy = 1; // 복사본
     public void AniChanger() // 애니메이션 스프라이트 변경 기능
     {
         
@@ -40,15 +42,13 @@ public class Pril_Control : MonoBehaviour
         else if(moveDir_cpy == 1) // 오른쪽 이동
             transform.Translate(new Vector3(movespeed, 0, 0));
     }
+
     public void SetTargetPoint() // 목표지점 설정
     {
         if(Input.GetMouseButtonDown(1))
         {
             prilstate_cpy = (int)ANISTATE.WALK; // 애니메이션 변경
             TargetPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            Debug.Log(TargetPoint.x);
-            Debug.Log(Pril.transform.position.x);
 
             if (TargetPoint.x > Size.maxMove)
                 TargetPoint.x = Size.maxMove;
@@ -59,28 +59,27 @@ public class Pril_Control : MonoBehaviour
             if (TargetPoint.x > Pril.transform.position.x) // 이동 방향설정 - 오른쪽
             {
                 moveDir_cpy = 1;
-
-                if (moveDir_org != moveDir_cpy)
-                {
-                    moveDir_org = moveDir_cpy;
-                    prilstate_cpy = (int)ANISTATE.TURN;
-                    AniChanger();
-                }
                 GetComponent<SpriteRenderer>().flipX = false;
+                if(moveDir_cpy != moveDir_org)
+                {
+                    
+                }
             }
             else if(TargetPoint.x < Pril.transform.position.x) // 이동 방향설정 - 왼쪽
             {
-                moveDir_cpy = 0;
-
-                if (moveDir_org != moveDir_cpy)
-                {
-                    moveDir_org = moveDir_cpy;
-                    prilstate_cpy = (int)ANISTATE.TURN;
-                    AniChanger();
-                }
+                moveDir_cpy= 0;
                 GetComponent<SpriteRenderer>().flipX = true;
+                if (moveDir_cpy != moveDir_org)
+                {
+
+                }
             }
         }
+    }
+
+    public void TurnAnimation()
+    {
+
     }
 
     public void Update() 
